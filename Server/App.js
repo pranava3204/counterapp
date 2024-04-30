@@ -121,7 +121,7 @@ app.use(express.static(path.join(__dirname,"build")));
 
 app.use(express.json());
 app.use(cors({
-  origin:["http://localhost:5000","https://counterapp.onrender.com"],
+  origin:["http://localhost:3000","https://counterapp.onrender.com"],
 }));
 
 // MongoDB Connection
