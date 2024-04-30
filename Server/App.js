@@ -120,7 +120,9 @@ const PORT = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname,"build")));
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin:["http://localhost:5000","https://counterapp.onrender.com"]
+}));
 
 // MongoDB Connection
 mongoose.connect('mongodb+srv://marripranava:pranava3204@cluster0.et0gedu.mongodb.net/?retryWrites=true&w=majority')
